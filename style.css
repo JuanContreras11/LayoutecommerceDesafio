@@ -1,0 +1,126 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos del contenedor principal */
+.container {
+  display: grid;
+  grid-template-areas:
+    "nav nav nav"
+    "side grid grid"
+    "foot foot foot";
+  grid-template-columns: 1fr 3fr 3fr;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+/* Estilos del menú de navegación */
+.nav {
+  grid-area: nav;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.nav-logo {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-link {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+/* Estilos de la barra lateral */
+.side {
+  grid-area: side;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.side-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.side-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.side-item {
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+/* Estilos de la grilla de productos */
+.grid {
+  grid-area: grid;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Estilos de las tarjetas de productos */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.card-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.card-name {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card-button {
+  width: 100px;
+  height: 30px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilos del pie de página */
+.foot {
+  grid-area: foot;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
